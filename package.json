@@ -1,0 +1,29 @@
+{
+  "name": "weshy_bot",
+  "version": "1.0.0",
+  "description": "a bot I use as my personal CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon --debug --config nodemon.json ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendy-weshy/weshy_bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trendy-weshy/weshy_bot/issues"
+  },
+  "homepage": "https://github.com/trendy-weshy/weshy_bot#readme",
+  "dependencies": {
+    "dotenv": "4.0.0",
+    "moment": "2.18.1",
+    "telegraf": "3.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.12.1"
+  }
+}

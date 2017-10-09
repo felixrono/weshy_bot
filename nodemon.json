@@ -1,0 +1,9 @@
+{
+    "ignore": ["node_modules/**/node_modules", "public/*", "view/*", "logs/*", ".vscode/*", ".git"],
+    "watch": ["./"],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js json",
+    "delay": "4000"
+}
