@@ -5,6 +5,7 @@
 'use strict';
 
 const _ = require('lodash');
+const {Extra} = require('telegraf');
 
 exports.interchangables = {
     salutations: (name) => {
@@ -18,4 +19,22 @@ exports.interchangables = {
         return replies[idx];
     }
 };
-exports.servicesKeyBoard = '';
+
+exports.servicesKeyboard = Extra
+.HTML()
+.markup((m) => m.inlineKeyboard([
+  m.callbackButton('Learn more about me', 'about:megan'),
+  m.callbackButton('What I know about John', 'about:john'),
+  m.callbackButton('Services offered here', 'services'),
+  m.callbackButton(`Get John's contacts`, 'contacts'),
+  m.callbackButton('Leave him a message', 'leave:message'),
+  m.callbackButton(`Check outbox for left messages`, 'left:messages')
+],
+{columns: 2}));
+
+exports.deleteMessageBtn = Extra.HTML().markup(
+    (m) => m.inlineKeyboard([
+        m.callbackButton('Delete this message', 'delete:message')
+    ],
+    {columns: 1})
+);

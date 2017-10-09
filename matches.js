@@ -2,5 +2,5 @@
  * created by waweru
 */
 
-exports.salutations = /(hi|hello|hey)/g;
+exports.salutations = /(h|H)([i|ello|ey])/g;
 exports.defaultAction = /.+/g;

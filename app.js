@@ -18,6 +18,8 @@ app.command('start', Bot.Commands.start);
 
 app.hears(matches.salutations, Bot.Hears.salute);
 
+app.action('left:messages', Bot.actions.leftMessage);
+app.action('delete:message', ({deleteMessage}) => deleteMessage());
 app.action(matches.defaultAction, Bot.actions.defaulter);
 
 // commence

@@ -4,8 +4,8 @@
 
 'use strict';
 
-const {interchangables} = require('./helpers');
+const {interchangables, servicesKeyboard} = require('./helpers');
 
 module.exports = {
-    salute: ({ message, reply }) => reply(interchangables.salutations(message.from.last_name))
+    salute: ({ message, reply }) => reply(interchangables.salutations(message.from.first_name), servicesKeyboard)
 };
