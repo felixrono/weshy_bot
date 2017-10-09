@@ -4,9 +4,8 @@
 
 'use strict';
 
+const {interchangables} = require('./helpers');
+
 module.exports = {
-    salute: ({ message, reply }) => {
-        const msg = `Hello am Megan, anything I can do for you  ${message.from.last_name} ?`;
-        reply(msg);
-    }
+    salute: ({ message, reply }) => reply(interchangables.salutations(message.from.last_name))
 };
